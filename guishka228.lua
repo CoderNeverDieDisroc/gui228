@@ -1168,7 +1168,7 @@ local themes = {
 
 local themeobjects = {}
 
-local library = utility.table({theme = table.clone(themes.AirHub), folder = "AntiMiss", extension = "cfg", flags = {}, open = false, keybind = Enum.KeyCode.RightShift, mousestate = services.InputService.MouseIconEnabled, cursor = nil, holder = nil, connections = {}}, true)
+local library = utility.table({theme = table.clone(themes.AirHub), folder = "Blume", extension = "cfg", flags = {}, open = false, keybind = Enum.KeyCode.RightShift, mousestate = services.InputService.MouseIconEnabled, cursor = nil, holder = nil, connections = {}}, true)
 local decode = (syn and syn.crypt.base64.decode) or (crypt and crypt.base64decode) or base64_decode
 library.gradient = decode("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABuSURBVChTxY9BDoAgDASLGD2ReOYNPsR/+BAfroI7hibe9OYmky2wbUPIOdsXdc1f9WMwppQm+SDGBnUvomAQBH49qzhFEag25869ElzaIXDhD4JGbyoEVxUedN8FKwnfmwhucgKICc+pNB1mZhdCdhsa2ky0FAAAAABJRU5ErkJggg==")
 library.utility = utility
@@ -1398,7 +1398,7 @@ function library:SetTheme(theme)
 end
 
 function library:GetThemes()
-	local themes = {"Default", "Midnight", "AntiMiss"}
+	local themes = {"Default", "Midnight", "blume"}
 
 	local folderpath = string.format("%s//themes", self.folder)
 
@@ -2790,7 +2790,7 @@ end
 function library:Load(options)
 	options = options or {}
 	utility.table(options)
-	local name = "AntiMiss.cc"
+	local name = "Blume.cc"
 	local sizeX = options.sizex or 450
 	local sizeY = options.sizey or 500
 	local theme = options.theme and options.theme or "AirHub"
